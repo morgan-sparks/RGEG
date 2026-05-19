@@ -1,0 +1,679 @@
+---
+title: ""
+format: pdf
+editor: visual
+execute:
+  echo: false
+  warning: false
+  
+  message: false
+  results: asis
+filters:
+  - multibib
+  - lua/bold-sparks.lua
+validate-yaml: false
+bibliography: 
+  main: bibs/journal_articles.bib
+  offered: bibs/conf_presentations.bib
+  invited: bibs/invited.bib
+  software: bibs/pkgs.bib
+  inreview: bibs/preprints.bib
+  inprep: bibs/working.bib
+  tech: bibs/tech_transfer.bib
+  reports: bibs/tech_reports.bib
+csl: csl/PD_custom.csl
+nocite: |
+  @*
+---
+
+```{r}
+knitr::opts_chunk$set(
+  echo = FALSE, 
+  warning = FALSE, 
+  message = FALSE,
+  result = "asis"
+  )
+
+library(vitae)
+library(dplyr)
+library(RefManageR)
+source(here::here("R/pretty.R"))
+source(here::here("R/rpackages.R"))
+source(here::here("R/gcite.R"))
+
+
+### details to setup multibib
+# https://github.com/pandoc-ext/multibib/tree/main
+# have to add
+# 
+# nocite: |
+#   @*
+# 
+# to YAML to make thes bibs render
+```
+
+## Panel Review Package
+
+**Morgan M. Sparks, Ph.D.**
+
+Research Fish Biologist, GS-0482-12
+
+U.S. Forest Service
+
+Rocky Mountain Research Station
+
+Water and Watersheds Science Program
+
+322 E. Front St., Suite 401
+
+Boise, ID 83702
+
+Morgan.Sparks\@usda.gov \| (208) 514-6345
+
+\newpage
+
+# Factor 1 - The Research Assignment
+
+------------------------------------------------------------------------
+
+## A. Research Team
+
+The scientist is a Research Fish Biologist with the U.S. Forest Service, Rocky Mountain Research Station (RMRS), Water and Watersheds (W&W) Research Program (RWU-4354) at the Boise Aquatic Sciences Lab in Boise, ID. The W&W program is organized around research supporting the investigation of physical and biological processes of aquatic environments and the larger ecosystems and physical environments within which they operate and interact. The program supports a variety of researchers including research fish biologists, research geomorphologists, research ecologists, and research hydrologists. Similarly, when the scientists started their position in January 2024, the lab was supported by diverse support staff , including biologists and hydrologists among other roles, though nearly all of those staff have departed in conjunction with the larger staff turnover within the agency.
+
+The W&W mission is *to conduct basic and applied research on the effects of natural processes and human activities on watershed resources, including interactions between aquatic and terrestrial ecosystems*. Program scientists focus on three Research Problem Areas as described in the charter:
+
+1.  Quantifies the dynamics of hydrologic, geomorphic, and biogeochemical processes in forests and rangelands at multiple scales.
+
+2.  Quantifies the biological processes and patterns that affect the distribution, resilience, and persistence of native and non-native aquatic and riparian species.
+
+3.  Integrated, interdisciplinary research explores the interactions of physical and biological ecosystem processes that contribute to watershed condition in a changing environment.
+
+**CHANGE** The charter outlines a unified framework of research for exploring complex relationships among the physical, chemical and biological properties of watersheds, the ecosystem processes that sustain biodiversity, and aquatic resource conservation, management, and restoration throughout the western U.S. The research program is designed to primarily address watersheds associated with extensive wildlands with diverse climates where high proportions of the lands are publicly administered within the federal estate. The region also hosts a growing human population, increasing pressures from energy exploration and development, is water supply limited, and subject to rapid climate change that puts additional stressors on aquatic ecosystems. Many native cold-water and desert fish species are federally listed under the Endangered Species Act or are otherwise considered sensitive species of management concern due to a combination of pressures from these factors, historical land management, and expanding non-native species invasions.
+
+## B. Personal Research Assignments
+
+The scientist leads a diverse research portfolio centered on the management and conservation of fishes pertinent to the Rocky Mountain Region. In many cases, these fishes are salmonids (salmon, trout, and their allies), of which many species/subspecies/population units are Endangered Species Act listed. Similarly, many of these species comprise recreational fisheries important to their respective forests and regions. Central to this work, the scientists works in three primary research themes:
+
+1.  Quantifying the processes and patterns that affect the distribution, resilience, and persistence of fishes with genomic and genetic tools.
+2.  Leveraging the relationship between physical conditions and biological responses to better understand ecological and management outcomes for aquatic and riparian species.
+3.  Integrating interdisciplinary methods and teams to explore physical and biological drivers of productivity and resilience of fishes.
+
+The scientists integrates a suite of next-generation and conventional fisheries approaches to address these research areas. Specifically, these include genomics/genetics, advanced statistical models, software development, remote sensing, and conventional field techniques. When the scientist does not have the expertise to directly answer a question he partners with colleagues within and outside of the agency to build an interdisciplinary co-developed research program. To advance this research, the scientist leads or co-leads four teams: 1) Greenback Genetic Rescue and Recovery Team, 2) Developmental Phenology Modeling Team, 3) Bull Trout Genetic Tools and Parentage Team, and 4) Middle Fork Salmon River Chinook Salmon Research Group.
+
+*Greenback Genetic Rescue and Recovery Team (Research Theme 1)*
+
+The scientist leads various projects focused on the recovery of greenback cutthroat trout, the state fish of Colorado, and an ESA listed species that exists exclusively on Forest Service lands. Specifically, the scientists oversees projects with a senior Professor at Colorado State University, a GS-15 equivalent research scientist at NOAA, a PhD-level researcher at Colorado Parks and Wildlife to use genomic tools to understand genome-wide patterns of standing genetic variation and adaptive capacity in greenback cutthroat and Colorado River cutthroat, a closely related subspecies. Similarly, the scientists also leads a parallel project analyzing the genomic consequences of a genetic rescue experiment run by their co-lead at Colorado Parks and Wildlife and collaborates with a GS-12 Research Scientist at the Rocky Mountain Research Station National Genomics Center to accomplish this research. In this capacity, he also serves in an *ad hoc* role on the multi-agency Greenback Recovery Team developed in response to ESA listing.
+
+Recently, the scientist has helped co-lead the recruitment of a PhD student to start at Colorado State University in Fall 2026, who will execute a set of experimentally rescued populations of greenback cutthroat trout on private and National Forest Lands with the above partners. This new project will bring in an additional co-lead, a junior faculty at Colorado State University, as well as a GS-12 Biologist with the USFS National Stream & Aquatic Ecology Center in the Washington Office. This stage of the project will also design tools to support recovery team efforts across numerous reintroduced populations and conservation hatcheries, most of which are distributed across National Forests in Colorado.
+
+*Developmental Phenology Modeling Team (Research Theme 2)*
+
+The scientists co-leads a team (along with Bryan Maitland, GS-13 Research Fish Biologist) to develop tools to predict developmental phenology of fishes and other poikilotherms across thermally variable habitats globally. This work also collaborates with a GS-12 Fish Biologist at USFWS, a PhD-level Research Scientist at Wisconsin Department of Natural Resources, and a PhD-Level Research Scientist with the Smithsonian Tropical Research Institute. This work has led to the development of an R package (CITATION), publications (CITATION), research highlight (CITATION), and technology transfer (CITATION) related to the development of software that allows users to predict when fish hatch and emerge in the wild. Similarly, the scientist along with colleagues further expanded the tool with a publication highlighting its utility for similar approaches with any poikilotherm, showing broad generalization across divers taxa ranging from amphibians and reptiles to freshwater and marine invertebrates (CITATION). This work grew from foundational research by scientist, who developed the techniques with a GS-14 Research Fish Biologist at the USGS and a senior faculty at the University of Alaska Fairbanks (CITATION)
+
+This work has also grown into specific research application, in which the scientist and co-leads have developed a modelling framework (CITATION) allowing them to accurately predict the temporal development of redds for Chinook Salmon in the Middle Fork Salmon River. The group will then leverage those data to model developmental phenology across 30 years of data and more than 25,000 Chinook salmon redds in the watershed over that time.
+
+The scientist is also in the initial stages of tool development with other co-leads and new collaborator (GS-14 Ecologist) to develop a new geo-spatial interactive tool to integrate Pacific Northwest-wide temperature data so Forest Biologists or collaborators can interactively predict developmental phenology in specific stream reaches throughout Washington, Oregon, Idaho, and Montana. This work has involved collaboration with the R&D and Forest Service Office of the Chief Information Officer to find solutions with technological infrastructure to host cutting-edge tools on behalf of the Forest Service and its partners.
+
+*Bull Trout Genetic Tools and Parentage Team (Research Themes 2,3)*
+
+The Scientist leads and co-leads (along with Bryan Maitland, GS-13 Research Fish Biologist), various projects focusing on interdisciplinary tools to understand population productive of bull trout, an ESA threatened species widely distributed on National Forest lands. Central to this project is the development of long-term research program where the scientist leads a multi-generational capture-mark-recapture study to understand how various biological and physical stressors relate to productivity of a local bull trout population (CITATION). The scientist collaborates with co-lead Maitland, who is responsible for leading the design and collection of samples to assess food web and ecological connections in the system. The work consists of a highly collaborative effort, which has brought in numerous partners and volunteers from Boise National Forest, Idaho Department of Fish and Game, Idaho Power, Trout Unlimited, Colorado State University, Bureau of Reclamation, and the local community.
+
+The long-term research program has spurred additional efforts across the region to develop research in similar systems and tools to support this research, specifically, a genetic tool to implement genetic capture-mark-recapture work, which does not yet exist for the species. This work is driven by collaboration with multiple scientists at Idaho Fish and Game's Eagle Fish Genetics Lab and with faculty at University of Idaho. The scientist also collaborates closely with Idaho Fish and Game's native fish coordinator and US Fish and Wildlife Service's Bull Trout Recovery Projects Lead to implement results, techniques, and questions across similar projects for bull trout.
+
+*Middle Fork Salmon River Chinook Salmon Research Group (Research Themes 2,3)*
+
+The scientist co-leads the Frank Church Chinook Salmon Research Group along with numerous other research scientists. This team conducts research to inform management and conversation of ESA “Threatened” Chinook Salmon in the wild and scenic Middle Fork Salmon River, which runs through Frank Church River of No Return Wilderness, ID. The team has multiple research areas. First, is the integration of modeling techniques to associate the relationships of the highly diverse physical environments of this watershed with adult spawning and juvenile developmental phenology using long-term RMRS datasets (CITATION, see Developmental Phenology Modeling Team). Furthermore, the team works to develop novel applications of remote sensed data to monitor Chinook salmon populations in inaccessible wilderness terrain, which was supported by external funding (CITATION) with partners. Finally , it works to use isotope analyses to identify the most productive Chinook spawning areas in the Middle Fork Salmon River. In addition to the scientist, the team includes a GS-13 Research Fish Biologists (team lead) from the Water and Watersheds Program, a GS-12 Research Ecologist and Tribal Liaison with the Aldo Leopold Wilderness Research Institute, the Fisheries Science Director and Geo-spatial Science Director (both Ph.D. level positions) at Trout Unlimited, and occasional input from a RMRS Emeritus Research Fish Biologist.
+
+## C. Research Related Assignments
+
+The scientist serves as and *ad hoc* member of the Greenback Recovery Team which oversees inter-agency priorities for greenback cutthroat trout recovery as specific by the endangered species act (Consultation 4.B.6.1)
+
+## D. Supervisory Responsibilities and Administrative Assignments
+
+Prior to the massive personnel changes in the agency, the scientist shared supervisory responsibilities with other researchers in the Boise Aquatics Lab. There were no direct supervisees under the scientist in organization chart when they were hired and the potential for filling such positions has only diminished in the period since. However, prior to the personnel changes in the agency (and continuing with remainingg technical staff), the scientist routinely delegated research and administrative tasks to office staff. Similarly, when running field operations, such as their bull trout work in the Crooked River (CITATION) the scientist manages large field-going teams that span from research scientists to community volunteers.
+
+The scientists also manages joint-venture accounts with universities, as well as existing funds at Colorado State University from their time as a postdoc (CITATIONS). In doing so they make decisions about project and research priorities, staffing, and compensation. Additionally, because much of the support staff in the Boise Aquatic Lab left in 2024 and 2025, the scientist manages the administrative roles on their research projects, especially permitting and reporting requirements. Together, this work takes about 10-20% of the scientists time.
+
+\newpage
+
+# Factor 2 - Supervisory Controls
+
+------------------------------------------------------------------------
+
+The scientist independently leads are research activities in this role and is responsible for the full cycle of research from funding to dissemination, including distribution via peer-reviewed publication. The scientist's supervisor in the Program Manager for their research work unit (RWU-4354), who occasionally provides guidance to the scientist concerning agency priorities, funding opportunities, and administrative procedures.
+
+Presently, the scientists has no direct supervisory roles, in part because existing support staff were already allocated to senior scientists. Similarly, most of the the support staff in the program departed in the period since the scientist joined, none of which have been back-filled due to an extended hiring freeze in the agency. Despite no direct supervisory responsibility, the scientist routinely delegates research tasks and responsibilities to support staff (GS-12 GIS Analyst and Fish Biologist). Moreover, the scientist leads field work (CITATION) where they are responsible for overseeing teams as large as 15 members spanning senior research scientists to agency and non-agency partners to community volunteers.
+
+The scientist is considered a national and international expert in their field. They are routinely sought after for peer review by scientific publications and granting committees. The scientist similarly publishes is nationally and internationally recognized journals in their discipline. Finally, the scientists has successfully funded research from competitive calls, including as the top-rated proposal (2/2 review committees) for the National Science Foundation Postdoctoral Research Fellowship in Biology (CITATION), which is considered one of the most prestigious fellowships in their discipline.
+
+\newpage
+
+# Factor 3 - Guidelines and Originality
+
+------------------------------------------------------------------------
+
+## A. Available Literature
+
+The modern questions concerning how best to manage and conserve fisheries is a growing field. It brings together conventional fisheries techniques including well established methods (especially in the field), population dynamics, ecology, and wildlife management. However, the technological changes driving much of ecological and biological sciences is becoming increasingly important to how fisheries are managed and preserved. These changes include integration of big data sciences such as genomics, remote sensing, and software development. They also increasingly rely on disparate, interdisciplinary techniques that are complementary but often require partnerships to bring expertise together. As such, the foundation of modern fisheries and watershed sciences is well established, however experiencing a period where it heavily influenced by quickly moving disciplines (e.g. genomics), which requires translational science that can merge sciences developed in model systems to non-model organisms or ecosystems.
+
+## B. Originality Required
+
+Because modern fisheries and watersheds sciences often sit at the nexus of conventional and well-established methods, but are increasingly pushed by disciplines and techniques developed outside of fisheries, contemporary research in these sciences requires integrative, collaborative, and forward looking scientists and teams. To this end, original science in the discipline often consists of taking methods that are too costly, inefficient, or methodologically intensive and adapting them to research questions or for research products that are useful to partners. Alternatively, new technologies (e.g. open source-software) may allow for the integration of techniques that are already well established but not integrated into the discipline because they were intractable until modern tools allowed them to become widely available. Finally, as these tools and techniques are integrated into the discipline, they open research avenues that were once unthinkable within the science.
+
+## C. Demonstrated Originality
+
+Dr. Sparks has completed many research projects that integrate modern techniques around fisheries questions. In the tools as the basis for the Developmental Phenology Modeling Team (Factor 1.B) , he leverage old techniques and used new mathematical conventions to take laboratory approaches to wild settings (CITATION). This represented a first of its kind toolset to allow accurate and precise estimates of developmental phenology for wild fishes. He then developed these tools into a widely distributed tool set available both as a highly flexible programmatic tool (CITATION), but also as a widely useable point-and-click resource available to non-technical partners. This work has then become even more generalizeable as it has been extended to all poikilotherms (CITATION). Similarly, genomic technologies are revolutionizing fisheries science by allowing the identification of fitness related genomic regions and their phenotypic consequences. These themes are the center of Dr. Sparks work with Greenback Cutthroat Trout and Bull Trout (Factor 1.B), as well as other partnerships and consultations (CITATION). In CITATION, Dr. Sparks highlighted how an introduced fish rapidly adapted to a novel environment despite massive reductions in genetic diversity—serving as a model for many introduced and invasive fishes. Dr. Sparks current research now focuses specifically on taking genomic techniques—data that is largely intractable USFS and non-agency partners–and building tools or integrating results into frameworks that drive meaningful interpretations for management and conservation of populations (CITATION). Finally, Dr. Sparks research program focuses especially on integrating cross-disciplinary techniques to answer who ecology questions. For instance, his work leading the Bull Trout Genetic Tools and Development Team (Factor 1.B), integrates genetic techniques with remote sensing, ecological tools (isotopes), and movement ecology to provide a full ecosystem perspective on factors driving productivity of this ESA listed fish.
+
+\newpage
+
+# Factor 4 - Qualifications and Scientific Contributions
+
+------------------------------------------------------------------------
+
+## A. Personal Data
+
+#### 1. Name
+
+Morgan Sparks
+
+#### 2. Educational Background
+
+**a. College Degrees**
+
+```{r, results='asis'}
+tribble(
+  ~ Year, ~ Degree, ~ Feild, ~ Institution,
+  2023, "Ph.D.", "Biology", "Purdue University",  
+  2016, "M.Sc.", "Fisheries", "University of Alaska Fairbanks", 
+  2013, "B.S.", "Wildlife Biology (Aquatic) \\textit{High Honors}", "University of Montana",
+  2013, "B.A.", "Journalism (Print) \\textit{High Honors}", "University of Montana"
+  ) |> 
+  baretable()
+```
+
+**b. Additional Academic Study:** None
+
+**c. Leadership Development Courses:** None
+
+#### 3. Date Last Promotion (Date Hired)
+
+January 14, 2024
+
+#### 4. Professional Experience
+
+```{r employment, results='asis'}
+tribble(
+  ~Start, ~End, ~Position,
+  2024, NA, "\\textbf{Research Fish Biologist GS-0482-12}, Rocky Mountain Research Station (RWU-4354), USDA Forest Service",
+  2023, 2024, "\\textbf{Postdoctoral Fellow}, National Science Foundation (\\textit{host} Colorado State University)",
+  2017, 2023, "\\textbf{Research Assistant}, Department of Biology, Purdue University",
+  2014, 2016, "\\textbf{Research Assistant}, USGS Alaska Cooperative Fish and Widlife Research Unit, University of Alaska Fairbanks"
+  ) |>
+  arrange(-Start) |>
+  mutate(
+    Start = as.character(Start),
+    End = as.character(End),
+    End = tidyr::replace_na(End, "Present"),
+    Years = if_else(End == Start,
+      as.character(Start),
+      paste(Start, "--", End, sep = ""),
+      paste(Start, "--", End, sep = "")
+    )
+  ) |>
+  select(Years, Position) |>
+   baretable(
+    align = "llp{14cm}",
+    size = "\\fontsize{10}{12}"
+    )
+```
+
+## B. Professional Activities and Recognition
+
+### 1. Honors and Awards
+
+#### a. Professional Awards
+
+```{r award1, results='asis'}
+tribble(
+  ~Year, ~Award,
+  2026, "Early Career Scientist Award, U.S. Forest Service, Rocky Mountain Research Station",
+  2025, "Outstanding Service Award, U.S. Forest Service, Rocky Mountain Research Station",
+  2024, "Outstanding Service Award, U.S. Forest Service, Rocky Mountain Research Station",
+  ) |>
+   baretable(
+    align = "llp{14cm}",
+    size = "\\fontsize{10}{12}"
+    )
+```
+
+#### b. Fellowships
+
+```{r award2, results='asis'}
+tribble(
+  ~Year, ~Award,
+  2023, "SoGES Sustainability Leadership Fellowship, Colorado State University",
+  2022, "Bisland Dissertation Fellowship, Purdue University", 
+  2021, "Waser Fellowship, Purdue University Department of Biological Sciences", 
+  2020, "Purdue Research Foundation Graduate Fellowship", 
+  2017, "Andrews Fellowship, Purdue University Department of Biological Sciences",
+  ) |>
+   baretable(
+    align = "llp{14cm}",
+    size = "\\fontsize{10}{12}"
+    )
+```
+
+#### c. Student Awards
+
+```{r award3, results='asis'}
+tribble(
+  ~Year, ~Award,
+  2017, "Best Student Presentation,,Indiana Chapter American Fisheries Society",
+  2013, "Mortar Board Outstanding Senior Award, Wildlife Biology, University of Montana",
+  2013, "3rd place Student Feature Writing, Society of Professional Journalists, Region 10",
+  2012, "Student Speaker and Representative, University of Montana Wildlife Biology 75th Anniversary",
+  2012, "Wally McClure Scholarship, Montana Chapter American Fisheries Society",
+  2010, "Montana Druids Honors Society, Wildlife Biology, University of Montana",
+  2009, "Western Undergraduate Exchange Scholarship, University of Montana"
+  ) |>
+  baretable()
+```
+
+### 2. Society and Professional Activities
+
+#### a. Membership in Professional Societies
+
+```{r societies, results='asis'}
+tribble(
+  ~Start, ~End, ~Position,
+  2010, NA, "American Fisheries Society",
+  2018, 2019, "Society for the Study of Evolution",
+  2016, 2018, "American Society of Naturalists"
+  ) |>
+  arrange(Start) |>
+  mutate(
+    Start = as.character(Start),
+    End = as.character(End),
+    End = tidyr::replace_na(End, "Present"),
+    Years = if_else(End == Start,
+      as.character(Start),
+      paste(Start, "--", End, sep = ""),
+      paste(Start, "--", End, sep = "")
+    )
+  ) |>
+  select(Years, Position) |>
+  baretable()
+```
+
+#### b. Service in Professional Societies
+
+Executive Roles
+
+```{r service, results='asis'}
+tribble(
+  ~Start, ~End, ~Position,
+  2017, 2018, "Advisor, Purdue University Student Chapter of the American Fisheries Society",
+  2015, 2016, "Student Representaive, Alaska Chapter of the American Fisheries Society Executive Committee",
+  2014, 2016, "Outreach Coordinator, University of Alaska Fairbanks Student Chapter of the American Fisheries Society",
+  2010, 2013, "President, University of Montana Student Chapter of the American Fisheries Society",
+  2012, 2013, "Secretary, Westslope Chapter of Trout Unlimited"
+  ) |>
+  arrange(-Start) |>
+  mutate(
+    Start = as.character(Start),
+    End = as.character(End),
+    End = tidyr::replace_na(End, "Present"),
+    Years = if_else(End == Start,
+      as.character(Start),
+      paste(Start, "--", End, sep = ""),
+      paste(Start, "--", End, sep = "")
+    )
+  ) |>
+  select(Years, Position) |>
+  baretable(
+    align = "llp{14cm}",
+    size = "\\fontsize{10}{12}"
+    )
+  
+```
+
+### 3. University Involvement
+
+I collaborate extensively with numerous universities and academics, including Colorado State University, University of Idaho, Idaho State University, University of Montana, Oregon State University, Purdue University. These collaborations are the basis for numerous funded projects and research products.
+
+Additional forms of university involvement:
+
+-   *Affiliate Faculty (Colorado State University):* I serve as an affiliate faculty at Colorado State University in the department of biology. This partnership is the basis for my work with greenback cutthroat trout. In this role, I mentor an incoming PhD student, lead and collaborate on grants to fund research, and organize research activities to support our work with native cutthroat trout.
+
+-   *Mentorship:* I have mentored a variety of students and post-baccalaureates over the course of my career. They are listed below:
+
+    -   Post-baccalaureates:
+
+        -   2025-Present Amy Wang, Cornell University
+
+        -   2019-2020 Julia Markovitz, Purdue University
+
+    -   Undergraduates
+
+        -   2021-2023 Connor Johnson, Purdue University
+
+        -   2017-2018 Lindsey Dice, Purdue University
+
+        -   2016-2017 Monroe Morris, University of Alaska Fairbanks
+
+        -   2015-2017 Genevieve Johnson, University of Alaska Fairbanks
+
+*University Seminars*
+
+```{r talks, results='asis'}
+talks <- readr::read_csv("invited_talks.csv")
+
+talks |>
+  filter(Place != "Rocky Mountain Research Station, US Forest Service") |> 
+  mutate(
+    Time = paste0(Year),
+    Entry = paste(
+      "``", Title, "''. ",
+      Place, ".",
+      sep = ""
+      )
+    ) |>
+  select(Time, Entry) %>%  
+  baretable(
+    align = "llp{14cm}",
+    size = "\\fontsize{10}{12}",
+    add.to.row = list(
+      pos = as.list(seq(NROW(.))),
+      command = rep("\\\\[-0.32cm]", NROW(.))
+    )
+  )
+```
+
+*Guest Lectures*
+
+```{r guest-lecs, results='asis'}
+lecs <- readr::read_csv("guest_lecs.csv")
+
+lecs |>
+  mutate(
+    Time = paste0(Year),
+    Entry = paste(
+      "``", Title, "''. ",
+      Place, ".",
+      sep = ""
+      )
+    ) |>
+  select(Time, Entry) %>%  
+  baretable(
+    align = "llp{14cm}",
+    size = "\\fontsize{10}{12}",
+    add.to.row = list(
+      pos = as.list(seq(NROW(.))),
+      command = rep("\\\\[-0.32cm]", NROW(.))
+    )
+  )
+```
+
+### 4. Presentations
+
+#### a. Invited Papers and Posters
+
+::: {#refs-invited}
+:::
+
+#### b. Offered Papers and Posters
+
+::: {#refs-offered}
+:::
+
+### 5. Participation in Technical Conferences and Workshops
+
+### 6. Significant Consultations
+
+1.  **Greenback Recovery Team:** Since starting in 2024, I have served in an *ad hoc* capacity on the Greenback Recovery Team, where I add technical consultation to signees on the team. The recovery team represents multiple federal and state agencies and partners either with statutory or management responsibilities toward greenback cutthroat trout, an ESA threatened species. Specifically, I advise on technical aspects concerning genetic rescue efforts and the application and interpretation of genetic/genomic data and tool development as it pertains to the needs of the USFS and partners. In addition to this work, I work closely with a research team (including a PhD student joining the project in 2026) at Colorado State University and Colorado Parks and Wildlife to analyze existing genetic datasets of past genetic rescue work and to design and manage upcoming genetic rescue efforts in Colorado waters.
+
+2.  **hatchR: use and case studies within the USFS:** After the publication of the hatchR software and manuscript, I was contacted by Andy Efta (Region 1 Regional Hydrologist) and Bill Brignon (Region 6 Regional Fish Biologist) to provide demonstrations on the theory and use cases driving the tool. Specifically, the goal was to show forest biologists a general framework for how they might use the tool for general work planning and to create defensible work windows as they pertains to NEPA planning and other regulatory elements. I was also contacted by Mariel Leslie (Fish Biologist on Bitterroot National Forest) to consult on how she could use the tool locally, how she might deploy field sensors in conjunction with future tool use, and how she could use existing temperature datasets in lieu of deploying additional temperature sensors in the field.
+
+3.  **Roadless Rule Analysis and Collection:** A team of research scientists working with fish was contacted by Barbara Adams (Forest Service TES Aquatics Biologist for Region 6) who is leading fisheries studies for the Roadless Rule Post-Fire national priority projects. This team has asked for the assistance of RMRS scientists to aid in the literature review and compilation of the scope of effects that revocation of the Roadless Rule could have to listed, petitioned and sensitive NEPA species (ESA Losted). I helped find and organize literature to support project documentation and providing reviewing and editing expertise. Work on this consultation resulted in a commendation from Forest Service and USDA leadership (CITATION).
+
+4.  **Clearwater/Selway Rivers Trout Hybridization:** The scientist was contacted by John Hargrove (research geneticist at Idaho Department of Fish and Game) to aid in the interpretation and analysis of a temporal genetic dataset of hybridization rates for westslope cutthroat and rainbow trout in the two Upper Salmon River watersheds. I specifically helped rethink parts of the analysis to better account for changes in data types and the interpretation of these data. The product of this work will be distributed in a nationally recognized fisheries-focused scientific journal (CITATION).
+
+5.  **Payette National Forest Genetic Sampling:** Luke Ferguson (fish biologist with the Payette National Forest) contacted myself and a research geneticist with the National Genomics Center (RMRS) for help in designing sampling techniques (e.g., number of fish and where) to appropriately asses population connectivity of bull trout on the forest. The forest has since secured funds to put in three barriers in the Weiser River Basin to isolate three populations of bull trout from brook trout. Myself and the research geneticist at the NGC will help design pre-barrier sampling to infer population structure and post-implementation monitoring and management to maintain connectivity and adaptive capacity for these populations.
+
+6.  **Boise National Forest Data Analysis and Sampling:** Scott Brandt (Forest Fish Biologist, Boise National Forest) contacted the new fish scientists in thew Boise Aquatic Research Lab for help with data analysis for various projects on Boise National Forest. After 2024, the forest lost almost their entire fisheries staff and have been unable to keep up with their typical monitoring and assessment schedule. Myself and Bryan Maitland offered to assist in some of that capacity, including picking up some redd surveys for Chinook salmon in the Middle Fork Salmon River in 2025. We will be working with the forest to continue to streamline data analyses in 2026 after initial discussions from 2025.
+
+7.  **Genetic Basis for Adult Pink Salmon Migration Timing:** The author was part of an existing team using genetic tools to analyze adult freshwater migration timing for pink salmon before taking this position in 2024. His role on this project grew in the current position, to include being a subject matter expert on the team around the topic of early life history developmental timing and selection pressures. The team consists of multiple faculty at Purdue University, a PhD-level research scientist at Colorado State University, and a team of PhD- and Masters-level research scientists at Alaska Department of Fish and Game. The forthcoming publication (CIATION) is expected to be an highly influential contribution concerning specific genes that control freshwater emigration timing for anadromous salmonids.
+
+### 7. Scientific Exchanges
+
+## C. Scientific Accomplishments and Contributions
+
+#### 1. Embryonic developmental models and applications for fishes (*knowledge discovery, modeling and systems integration*)
+
+This research started during the scientist's Masters degree at the University of Alaska Fairbanks. There, he took existing developmental models for salmon that were used in non-variable aquaculture settings, but reworked their formulation such that they could be integrated into variable, wild thermal regimes. This was a major step forward in how we predict developmental phenology for fishes, because it solved an important problem in that it integrated daily temperatures and could accurately and precisely predict developmental phenology. For this work, the scientists published multiple articles establishing this new approach and demonstrating how it could widely used for numerous populations. Additionally, the scientist demonstrated using an experiment how the modeling framework could be adapted to alternative populations to better integrate local adaptation across widely distributed species' ranges. This approach has been widely adopted in the community, however limited in reach because it required users to be conversant in both technical programming and statistical modeling.
+
+In his current position, the scientist wanted to create a framework to formalize this modeling approach and make customization much easier. As a result, he worked with other Boise Lab Research Fish Biologist, Bryan Maitland, to develop hatchR, a software ecosystem (R package and shiny app) that allows users easy integration of these methods into research and management workflows. The outcome of this work is a CRAN distributed R package along with an extensive [user manual](https://bmait101.github.io/hatchR/), point-and-click [shiny app](https://bmait101.github.io/hatchR/articles/Shiny_app.html) for more user-friendly use, as well as a companion article describing the various software products and uses (CITATIONS). Specifically, the software is designed for two generalized use cases: 1. generalized ecological questions and answers, 2. work planning scenarios such as estimating if juvenile fish will still be in the gravel when roadwork may be done upstream. As such, the tool has been heavily used, since it was released in March 2025, it has been downloaded more than 2700 times. This also has led to consultations with Regions 1 and 6 in the format of Community of Practice presentations (CITATIONS), as well as with individual USFS biologists, numerous posters and scientific presentations (CITATIONS), and has been distributed as a USFS Science You Can Use publication (CITATION).
+
+A subsequent article is now in review that extends this modeling framework to other poikilothermic (cold-blooded) organisms, which shows it's utility for key species such as tailed-frogs (CITATION). This work has been built on partnerships with research scientists at universities, other federal research groups, and state research organizations. It also promises to continue to build new tools and avenues of research, including a new Forest Service-specific shiny app in early development, as well as research into developmental phenology using a long-standing Middle Fork Salmon River spawning data set compiled by the Boise Aquatics Lab (RMRS).
+
+#### 2. Rapid evolution in introduced species (*knowledge discovery*)
+
+This work was the primary focus of the scientist's PhD, in which he used genomic tools to understand rapid evolution by pink salmon to the Great Lakes in the mid-20th century. In this work, the scientist discovered a circadian gene under strong-selection in the invaded population, despite very large reductions in genetic diversity resulting from the founder effect during their introduction. This work one of the first to treat invasive and introduced species as model systems with which to investigate evolutionary and demonstrated how populations can rapidly adapt to novel ecosystems despite massive reductions in genetic diversity (the currency of adaptation). Furthermore, their dissertation presented evidence for a large chromosomal inversion—potentially harboring other adaptive genes—which was one of the first studies to highlight the role of chromosomal polymorphisms in adaptation to novel environments by salmonids. This work has been published in a leading journal (CITATION) and shared widely at top conferences for their respective disciplines (CITATION). While only recently published, this article has been the author's most cited article on per year basis and is likely to be one of the more consequential contributions to the field.
+
+#### 3. Characterizing inbreeding in and conservation actions for greenback cutthroat trout (*knowledge discovery*)
+
+Greenback cutthroat trout were extirpated from their native range in norther Colorado and were only recently rediscoverd as a small population outside of their native range. As a result, they are Threatened under the Endangered Species Act, while still maintaining key relevance to the state of Colorado, as its state fish. Moreover, their native habitat was largely in USFS-lands (e.g. Arapaho-Roosevelt and Pike-San Isbell National Forests), as well as some small areas in Rocky Mountain National Park. As such, their recovery is imperative to USFS, NPS, and state of Colorado priorities. Namely, the Poudre Headwaters Project on Arapaho–Roosevelt NF is focused on recovery of 40 miles of habitat for this subspecies, which has resulted in millions of dollars of salvage and rehabilitation work across USFS, federal, state, and private partners.
+
+This work started when the scientist was a postdoc at Colorado State University. He specifically funded this work first with a National Science Foundations Postdoctoral Fellowship in Biology—one of the most prestigious biological sciences fellowships, in which he was also the top proposal in both committees that reviewed it—and then, with an additional \~\$100,000 from Colorado Parks and Wildlife (CPW). The project was founded on a partnership with faculty from Colorado State University, a research scientists with CPW, a a research scientist with NOAA. Since these awards, the scientist has spent the past three years conducting field work collecting data for this project and partnering with CPW and local forests in Colorado. In this role, he has consulted heavily on this specific project, as well as in a broader capacity, namely as a USFS representative on the Greenback Recovery Team, in which the agency is a cosigner. The scientist has recently completed initial work on a data set from partners at CPW and University of Colorado Boulder, which was presented recently (CITATION).
+
+The scientist's expertise demonstrated in this work has led to additional partnerships and knowledge production around related topics. For instance, he consulted on a recent publication in cutthroat trout hybridization overseen by state partners (CITATION) and chaired a recent symposium on cutthroat trout genomics and research which brought together numerous experts spanning state, academic, private, and other federal research entities.
+
+#### 4. Factors determining bull trout demography (*knowledge discovery, knowledge development*)
+
+Bull trout are an ESA threatened species and one of the most widely distributed ESA-listed aquatic species on Forest lands in the western United States. As such, their management and conservation—as well as consideration for most USFS activities such as timber harvest or infrastructure improvement—is of paramount consideration to the agency. Despite their priority as a species, bull trout remain heavily understudied relative to their other salmonid species, namely salmon and steelhead. Because of this dearth of research, there are significant gaps in our basic biological understanding in the species.
+
+In their first year in this position, the scientist began a long-term monitoring project (genetic capture-mark-recapture) in the nearby Boise River Basin to answer some of these basic biological questions. Specifically, 1. How valuable are migratory phenotypes in driving population productivity?, 2. What are the ecological and genetic effects of hybridization with invasive brook trout?, 3. What additional physical and environmental characteristics contribute to positive and negative demographic outcomes? To date, more than 1300 bull trout have been captured in this project and over 2000 fish removed from the same stream. Similarly, the project partners with Boise National Forest, Idaho Department of Fish and Game, U.S. Fish and Wildlife Service, Trout Unlimited, and Idaho Power. As a result of these partnerships, interest in similar projects statewide has grown, with goals of implementing similar genetic-based capture-mark-recapture studies in other key watersheds statewide. This has led to key partnerships with the state and Idaho Power, as well as a new project to begin designing a unifying genetic tag to be used across these systems. The scientist will fund this work via a PhD student at the University of Idaho in collaboration with aforementioned partners and a Alex Fraik (Research Geneticists, RMRS National Genomics Center).
+
+#### 5. Characterizing trends and patterns of environmentally covarying local adaptation
+
+## D. Disseminating Research Results
+
+#### 1. Publications
+
+```{r article-counts}
+
+### not using
+n_pubs <- RefManageR::ReadBib("bibs/journal_articles.bib", check = FALSE) |> 
+  as_tibble() |> 
+  filter(bibtype == "Article") |> 
+  nrow()
+
+n_talks <- RefManageR::ReadBib("bibs/conf_presentations.bib", check = FALSE) |> 
+  as_tibble() |> 
+  nrow()
+```
+
+I have authored `r n_pubs` papers in peer-reviewed journals. On Google Scholar my h-index is `r bmm_cite$All[2]` with `r prettyNum(bmm_cite$All[1], big.mark=",")` total citations (as of `r format(Sys.time(), "%e %B %Y")`).
+
+::: {#refs-main}
+:::
+
+Additional manuscripts *In review:*
+
+::: {#refs-inreview}
+:::
+
+Additional manuscripts *In preparation:*
+
+::: {#refs-inprep}
+:::
+
+#### 2. Patents
+
+None
+
+#### 3. Documented, Archived, Databases
+
+None
+
+#### 4. Software Development
+
+hatchR has a total of `r hatchR_cites$citations` downloads (as of `r format(Sys.time(), "%e %B %Y")`).
+
+::: {#refs-software}
+:::
+
+#### 5. Electronic and Audio-Visual Outputs
+
+None
+
+#### 6. Demonstrations, Short Courses, and Training Sessions
+
+None
+
+#### 7. Assessment, Lands and Management Plans, and Other Policy Related Products
+
+None
+
+## E. Other Significant Information
+
+#### 1. Tech Transfer
+
+Presentations:
+
+::: {#refs-tech}
+:::
+
+Publications:
+
+::: {#refs-reports}
+:::
+
+#### 2. Interviews for Media Outlets
+
+None
+
+#### 3. Solicited Peer Reviews
+
+**a. Grant Review**
+
+*Great Lakes Fisheries Commission*
+
+**b. Scientific Journal Review**
+
+*North American Journal of Fisheries Management, Conservation Science and Practice, Molecular Ecology Resources, Journal of Applied Ichthyology, Conservation Physiology, Heredity, Evolutionary Applications, PLoS ONE, Canadian Journal of Aquatic and Fisheries Science, Transactions of the American Fisheries Society*
+
+#### 4. Grants Awarded
+
+```{r grants}
+
+grants <- readr::read_csv("grant_income.csv")
+
+sumgrants <- grants |> filter(Status %in% c("Complete", "In progress")) |> pull(Amount) |> sum(na.rm = TRUE)
+```
+
+I have acquired `r scales::dollar_format()(sumgrants)` in research grants (showing grants \>\$4999):
+
+```{r grants-table, results='asis'}
+
+grants |>
+  filter(Amount >= 5000) |>
+  filter(Status %in% c("Complete", "In progress", "Pending")) |> 
+  mutate(
+    Time = paste0(Start, ifelse(is.na(End), "", paste0("--", End))),
+    Entry = paste(
+      Role, ". ``", Title, "''. ",
+      "\\emph{Funding from ", Source, "}", ". Collaborators: ",
+      Collaborators, ".",
+      sep = ""
+    ),
+    Amount = dollars(Amount)
+  ) |>
+  arrange(desc(Time), desc(Amount)) |>
+  select(Time, Entry, Amount) %>%  
+  baretable(
+    align = "lp{1.6cm}p{13.3cm}r",  
+    # hline.after = c(0, NROW(.)),
+    size = "\\fontsize{10}{12}",
+    add.to.row = list(
+      pos = as.list(seq(NROW(.))),
+      command = rep("\\\\[-0.32cm]", NROW(.))
+    )
+  )
+```
+
+Below are invited full proposals that were invited but withdrawn due to federal funding issues:
+
+```{r grantstable-withdrawn, results='asis'}
+
+grants |>
+  filter(Status %in% c("Invited, retracted")) |> 
+  mutate(
+    Time = paste0(Start, ifelse(is.na(End), "", paste0("--", End))),
+    Entry = paste(
+      Role, ". ``", Title, "''. ",
+      "\\emph{Funding from ", Source, "}", ". Collaborators: ",
+      Collaborators, ".",
+      sep = ""
+    ),
+    Amount = dollars(Amount)
+  ) |>
+  arrange(desc(Time), desc(Amount)) |>
+  select(Time, Entry, Amount) %>%  
+  baretable(
+   align = "lp{1.6cm}p{13.3cm}r",
+    # hline.after = c(0, NROW(.)),
+    size = "\\fontsize{10}{12}",
+    add.to.row = list(
+      pos = as.list(seq(NROW(.))),
+      command = rep("\\\\[-0.32cm]", NROW(.))
+    )
+  )
+```
+
+Below are invited full proposals that were not awarded:
+
+```{r grantstable-invite, results='asis'}
+grants |>
+  filter(!Status %in% c("Complete", "In progress", "Pending", "Invited, retracted")) |> 
+  mutate(
+    Time = paste0(Start, ifelse(is.na(End), "", paste0("--", End))),
+    Entry = paste(
+      Role, ". ``", Title, "''. ",
+      "\\emph{Funding from ", Source, "}", ". Collaborators: ",
+      Collaborators, ".",
+      sep = ""
+    ),
+    Amount = dollars(Amount)
+  ) |>
+  arrange(desc(Time), desc(Amount)) |>
+  select(Time, Entry, Amount) %>%  
+  baretable(
+    align = "lp{1.6cm}p{13.3cm}r",
+    # hline.after = c(0, NROW(.)),
+    size = "\\fontsize{10}{12}",
+    add.to.row = list(
+      pos = as.list(seq(NROW(.))),
+      command = rep("\\\\[-0.32cm]", NROW(.))
+    )
+  )
+```
+
+#### 5. Research Highlights
+
+2025 - [hatchR: A toolset to predict fish development](https://research.fs.usda.gov/rmrs/articles/hatchr-toolset-predict-fish-development). Principle Investigators: Morgan Sparks and Bryan Maitland. US Forest Service Research and Development
+
+#### 6. Participation in Joint Venture Agreements
+
+1.  2024 - Present. Genetic Tools for Bull Trout Management. **Sparks M.M.** (Project Lead), Fraik A., and Maitland B. Coperator: University of Montana. Funding: \$20,000
+2.  2026 - Present. Aquatic Ecology in Western Watersheds. Maitland, B.M., **Sparks, M.M.**, and Fetzer, W.W.
+
+#### 7. Community Service
+
+## F. List of Exhibits in this PD
+
+## G. Personal Contacts
+
+## H. Accuracy and Privacy Act Information
+
+“I have received a copy of the Privacy Act Notice for Preparation of Factor IV, Qualifications and Scientific Contributions, Research Scientist Position Description. Also, by signing this form, I certify that the material presented in this position description is accurate.”

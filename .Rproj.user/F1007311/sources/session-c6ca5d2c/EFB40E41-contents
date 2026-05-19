@@ -1,0 +1,625 @@
+---
+name: Morgan M. Sparks
+position: ""
+address: "Rocky Mountain Research Station,\\tabularnewline USDA Forest Service, Boise, ID, USA"
+email: "msparks1309@gmail.com"
+orcid: 0000-0003-0787-2218
+github: morgan-sparks
+date: "`r format(Sys.time(), '%B %Y')`"
+csl: "csl/apa_cv.csl"
+output: 
+  vitae::hyndman:
+    pandoc_args: ["--lua-filter=lua/names.lua"]
+header-includes:
+  \definecolor{headcolor}{HTML}{005838}
+editor_options: 
+  markdown: 
+    wrap: 72
+---
+
+\newcounter{bib}
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(
+  echo = FALSE, 
+  warning = FALSE, 
+  message = FALSE
+  )
+
+library(vitae)
+library(dplyr)
+library(RefManageR)
+source(here::here("R/pretty.R"))
+source(here::here("R/rpackages.R"))
+source(here::here("R/gcite.R"))
+# source(here::here("R/add_bib_section.R"))
+```
+
+# Research Positions
+
+```{r employment, results='asis'}
+tribble(
+  ~Start, ~End, ~Position,
+  2024, NA, "\\textbf{Research Fish Biologist}, Rocky Mountain Research Station, USDA Forest Service",
+  2023, 2024, "\\textbf{Postdoctoral Fellow}, National Science Foundation (\\textit{host} Colorado State University)",
+  2017, 2023, "\\textbf{Research Assistant}, Department of Biology, Purdue University",
+  2014, 2016, "\\textbf{Research Assistant}, USGS Alaska Cooperative Fish and Widlife Research Unit, University of Alaska Fairbanks"
+  ) |>
+  arrange(-Start) |>
+  mutate(
+    Start = as.character(Start),
+    End = as.character(End),
+    End = tidyr::replace_na(End, "Present"),
+    Years = if_else(End == Start,
+      as.character(Start),
+      paste(Start, "--", End, sep = ""),
+      paste(Start, "--", End, sep = "")
+    )
+  ) |>
+  select(Years, Position) |>
+  baretable()
+```
+
+# Education
+
+```{r degrees, results='asis'}
+tribble(
+  ~ Year, ~ Degree, ~ Feild, ~ Institution,
+  2023, "Ph.D.", "Biology", "Purdue University",  
+  2016, "M.Sc.", "Fisheries", "University of Alaska Fairbanks", 
+  2013, "B.S.", "Wildlife Biology (Aquatic) \\textit{High Honors}", "University of Montana",
+  2013, "B.A.", "Journalism (Print) \\textit{High Honors}", "University of Montana"
+  ) |> 
+  baretable()
+```
+
+```{r article-counts}
+
+### not using
+n_pubs <- RefManageR::ReadBib("bibs/journal_articles.bib", check = FALSE) |> 
+  as_tibble() |> 
+  filter(bibtype == "Article") |> 
+  nrow()
+
+n_talks <- RefManageR::ReadBib("bibs/conf_presentations.bib", check = FALSE) |> 
+  as_tibble() |> 
+  nrow()
+```
+
+# Publications
+
+**I have authored `r n_pubs` papers in peer-reviewed journals. On Google
+Scholar my h-index is `r bmm_cite$All[2]` with
+`r prettyNum(bmm_cite$All[1], big.mark=",")` total citations (as of
+`r format(Sys.time(), "%e %B %Y")`).**
+
+```{r articles}
+bibliography_entries("bibs/journal_articles.bib") |> 
+  arrange(issued, desc(author$family))
+```
+
+# R-packages
+
+**hatchR has a total of `r hatchR_cites$citations` downloads (as of
+`r format(Sys.time(), "%e %B %Y")`).**
+
+```{r software}
+bibliography_entries("bibs/pkgs.bib")
+```
+
+# Theses
+
+```{r theses}
+bibliography_entries("bibs/theses.bib") |> 
+  arrange(issued, desc(author$family))
+```
+
+# Pre-prints and In Review
+
+```{r preprints}
+bibliography_entries("bibs/preprints.bib") |> 
+  arrange(desc(author$family))
+```
+
+# Manuscripts in Preparation
+
+```{r unpublished}
+bibliography_entries("bibs/working.bib")
+```
+
+# Grants
+
+```{r grants}
+grants <- readr::read_csv("grant_income.csv")
+
+sumgrants <- grants |> 
+  filter(Status %in% c("Complete", "In progress")) |> 
+  pull(Amount) |> 
+  sum(na.rm = TRUE)
+```
+
+### I have acquired *`r scales::dollar_format()(sumgrants)`* in research grants (showing grants \>\$4999):
+
+<!-- \vspace\*{0.2cm}\\enlargethispage\*{0.5cm} -->
+
+```{r grants-table, results='asis'}
+grants |>
+  filter(Amount >= 5000) |>
+  filter(Status %in% c("Complete", "In progress", "Pending")) |> 
+  mutate(
+    Time = paste0(Start, ifelse(is.na(End), "", paste0("--", End))),
+    Entry = paste(
+      Role, ". ``", Title, "''. ",
+      "\\emph{Funding from ", Source, "}", ". Collaborators: ",
+      Collaborators, ".",
+      sep = ""
+    ),
+    Amount = dollars(Amount)
+  ) |>
+  arrange(desc(Time), desc(Amount)) |>
+  select(Time, Entry, Amount) %>%  
+  baretable(
+    align = "lp{1.6cm}p{13.3cm}r",  
+    # hline.after = c(0, NROW(.)),
+    size = "\\fontsize{10}{12}",
+    add.to.row = list(
+      pos = as.list(seq(NROW(.))),
+      command = rep("\\\\[-0.32cm]", NROW(.))
+    )
+  )
+```
+
+<!-- \vspace\*{0.2cm}\\enlargethispage\*{0.5cm} -->
+
+### Below are invited full proposals that were invited but withdrawn due to federal funding issues:
+
+<!-- \vspace\*{0.2cm}\\enlargethispage\*{0.5cm} -->
+
+```{r grantstable-withdrawn, results='asis'}
+grants |>
+  filter(Status %in% c("Invited, retracted")) |> 
+  mutate(
+    Time = paste0(Start, ifelse(is.na(End), "", paste0("--", End))),
+    Entry = paste(
+      Role, ". ``", Title, "''. ",
+      "\\emph{Funding from ", Source, "}", ". Collaborators: ",
+      Collaborators, ".",
+      sep = ""
+    ),
+    Amount = dollars(Amount)
+  ) |>
+  arrange(desc(Time), desc(Amount)) |>
+  select(Time, Entry, Amount) %>%  
+  baretable(
+   align = "lp{1.6cm}p{13.3cm}r",
+    # hline.after = c(0, NROW(.)),
+    size = "\\fontsize{10}{12}",
+    add.to.row = list(
+      pos = as.list(seq(NROW(.))),
+      command = rep("\\\\[-0.32cm]", NROW(.))
+    )
+  )
+```
+
+<!-- \vspace\*{0.2cm}\\enlargethispage\*{0.5cm} -->
+
+### Below are invited full proposals that were not awarded:
+
+<!-- \vspace\*{0.2cm}\\enlargethispage\*{0.5cm} -->
+
+```{r grantstable-invite, results='asis'}
+grants |>
+  filter(!Status %in% c("Complete", "In progress", "Pending", "Invited, retracted")) |> 
+  mutate(
+    Time = paste0(Start, ifelse(is.na(End), "", paste0("--", End))),
+    Entry = paste(
+      Role, ". ``", Title, "''. ",
+      "\\emph{Funding from ", Source, "}", ". Collaborators: ",
+      Collaborators, ".",
+      sep = ""
+    ),
+    Amount = dollars(Amount)
+  ) |>
+  arrange(desc(Time), desc(Amount)) |>
+  select(Time, Entry, Amount) %>%  
+  baretable(
+    align = "lp{1.6cm}p{13.3cm}r",
+    # hline.after = c(0, NROW(.)),
+    size = "\\fontsize{10}{12}",
+    add.to.row = list(
+      pos = as.list(seq(NROW(.))),
+      command = rep("\\\\[-0.32cm]", NROW(.))
+    )
+  )
+```
+
+<!-- \vspace\*{0.2cm}\\enlargethispage\*{0.5cm} -->
+
+# Honors and Awards
+
+## Professional Awards
+
+```{r award1, results='asis'}
+tribble(
+  ~Year, ~Award,
+  2026, "Early Career Scientist Award, U.S. Forest Service, Rocky Mountain Research Station",
+  2025, "Outstanding Service Award, U.S. Forest Service, Rocky Mountain Research Station",
+  2024, "Outstanding Service Award, U.S. Forest Service, Rocky Mountain Research Station",
+  ) |>
+  baretable()
+```
+
+## Fellowships
+
+```{r award2, results='asis'}
+tribble(
+  ~Year, ~Award, ~Support,
+  2023, "SoGES Sustainability Leadership Fellowship, Colorado State University", "",
+  2022, "Bisland Dissertation Fellowship, Purdue University", "One semester full support",
+  2021, "Waser Fellowship, Purdue University Department of Biological Sciences", "6 months full support",
+  2020, "Purdue Research Foundation Graduate Fellowship", "One year full support",
+  2017, "Andrews Fellowship, Purdue University Department of Biological Sciences", "Two years full support"
+  ) |>
+  baretable()
+```
+
+## Student Awards
+
+```{r award3, results='asis'}
+tribble(
+  ~Year, ~Award, ~Group,
+  2017, "Best Student Presentation", "Indiana Chapter American Fisheries Society",
+  2013, "Mortar Board Outstanding Senior Award", "Wildlife Biology, University of Montana",
+  2013, "3rd place Student Feature Writing", "Society of Professional Journalists, Region 10",
+  2012, "Student Speaker and Representative", "University of Montana Wildlife Biology 75th Anniversary",
+  2012, "Wally McClure Scholarship", "Montana Chapter American Fisheries Society",
+  2010, "Montana Druids Honors Society", "Wildlife Biology, University of Montana",
+  2009, "Western Undergraduate Exchange Scholarship", "University of Montana"
+  ) |>
+  baretable()
+```
+
+# Invited Talks
+
+<!-- I have contributed `r n_talks` papers and posters at AFS, SFS, ASLO, AGU, IAGLR, and regional chapter meetings (pages \pageref{presstart}--\pageref{presend}). -->
+
+```{r talks, results='asis'}
+talks <- readr::read_csv("invited_talks.csv")
+
+talks |>
+  mutate(
+    Time = paste0(Year),
+    Entry = paste(
+      "``", Title, "''. ",
+      Place, ".",
+      sep = ""
+      )
+    ) |>
+  select(Time, Entry) %>%  
+  baretable(
+    align = "llp{14cm}",
+    size = "\\fontsize{10}{12}",
+    add.to.row = list(
+      pos = as.list(seq(NROW(.))),
+      command = rep("\\\\[-0.32cm]", NROW(.))
+    )
+  )
+```
+
+# Teaching
+
+## Teaching Assistantships
+
+```{r teaching, results='asis'}
+ tribble(
+  ~ Year, ~ Course, ~ Credits, ~ Institution,
+  2023, "BIOL 69500: Data Science for Biologists",  "3 credits", "Purdue University",
+  2022, "BIOL 5800: Evolution", "3 credits","Purdue University",
+  2019, "BIOL 19500: CURE Disease Ecology Lab", "5 credits","Purdue University",
+  2018, "BIOL 58210: Ecological Statistics ", "3 credits", "Purdue University",
+  2015, "FISH 427: Ichthyology",  "5 credits", "University of Alaska Fairbanks"
+  ) |>
+ baretable()
+```
+
+## Guest Lectures
+
+```{r guest-lecs, results='asis'}
+lecs <- readr::read_csv("guest_lecs.csv")
+
+lecs |>
+  mutate(
+    Time = paste0(Year),
+    Entry = paste(
+      "``", Title, "''. ",
+      Place, ".",
+      sep = ""
+      )
+    ) |>
+  select(Time, Entry) %>%  
+  baretable(
+    align = "llp{14cm}",
+    size = "\\fontsize{10}{12}",
+    add.to.row = list(
+      pos = as.list(seq(NROW(.))),
+      command = rep("\\\\[-0.32cm]", NROW(.))
+    )
+  )
+```
+
+# Mentoring
+
+```{r mentoring, results='asis'}
+undergrads <- tribble(
+  ~ Start, ~ End, ~ Name, ~ Institution,
+  2021, 2023, "Connor Johnson", "Purdue University",
+  2017, 2018, "Lindsey Dice", "Purdue University",
+  2016, 2017, "Monroe Morris", "University of Alaska Fairbanks",
+  2015, 2017, "Genevieve Johnson ", "University of Alaska Fairbanks"
+  ) |>
+  mutate(
+    Start = as.character(Start),
+    End = as.character(End),
+    End = tidyr::replace_na(End, ""),
+    Years = if_else(End == Start,
+      as.character(Start),
+      paste(Start, "--", End, sep = ""),
+      paste(Start, "--", End, sep = "")
+    )
+  ) |>
+  select(Years, Name, Institution)
+
+
+postbacs <- tribble(
+  ~ Start, ~ End, ~ Name, ~ Institution,
+  2025, NA, "Amy Wang", "Cornell University (EEB Mentor Match)",
+  2019, 2020, "Julia Markovitz", "Purdue University",
+  ) |>
+  mutate(
+    Start = as.character(Start),
+    End = as.character(End),
+    End = tidyr::replace_na(End, "Present"),
+    Years = if_else(End == Start,
+      as.character(Start),
+      paste(Start, "--", End, sep = ""),
+      paste(Start, "--", End, sep = "")
+    )
+  ) |>
+  select(Years, Name, Institution)
+# undergrads |>
+#   baretable()
+```
+
+### I have mentored `r nrow(postbacs)` post-baccalaureates and `r nrow(undergrads)` undergraduates in lab and field settings:
+
+## Post-baccalaureate
+
+```{r postbac-tables, results='asis'}
+postbacs |>
+  baretable()
+```
+
+## Undergraduates
+
+```{r undergrad-tables, results='asis'}
+undergrads|>
+  baretable()
+```
+
+\newpage
+
+# Professional Service and Leadership
+
+<!-- ## Adjunct and affiliate appointments -->
+
+<!-- ## Graduate student committees -->
+
+<!-- ## Postdoctoral researchers -->
+
+## Service
+
+```{r serivce, results='asis'}
+tribble(
+  ~Start, ~End, ~Position,
+  2017, 2018, "Advisor, Purdue University Student Chapter of the American Fisheries Society",
+  2015, 2016, "Student Representaive, Alaska Chapter of the American Fisheries Society Executive Committee",
+  2014, 2016, "Outreach Coordinator, University of Alaska Fairbanks Student Chapter of the American Fisheries Society",
+  2013, 2014, "Department Head Search Committee, Wildlife Biology, University of Montana",
+  2010, 2013, "President, University of Montana Student Chapter of the American Fisheries Society",
+  2012, 2013, "Secretary, Westslope Chapter of Trout Unlimited",
+  2016, 2017, "Science Advisor, Indiana Backcountry Hunters and Anglers",
+  2023, NA, "Ad hoc Advisor, Greenback Cutthroat Trout Recovery Team",
+  2020, 2021, "Student Representative at Town Hall, Ecology and Evolutionary Biology, Purdue University"
+  ) |>
+  arrange(-Start) |>
+  mutate(
+    Start = as.character(Start),
+    End = as.character(End),
+    End = tidyr::replace_na(End, "Present"),
+    Years = if_else(End == Start,
+      as.character(Start),
+      paste(Start, "--", End, sep = ""),
+      paste(Start, "--", End, sep = "")
+    )
+  ) |>
+  select(Years, Position) |>
+  baretable()
+```
+
+## Society Memberships
+
+```{r societies, results='asis'}
+tribble(
+  ~Start, ~End, ~Position,
+  2010, NA, "American Fisheries Society",
+  2018, 2019, "Society for the Study of Evolution",
+  2016, 2018, "American Society of Naturalists"
+  ) |>
+  arrange(Start) |>
+  mutate(
+    Start = as.character(Start),
+    End = as.character(End),
+    End = tidyr::replace_na(End, "Present"),
+    Years = if_else(End == Start,
+      as.character(Start),
+      paste(Start, "--", End, sep = ""),
+      paste(Start, "--", End, sep = "")
+    )
+  ) |>
+  select(Years, Position) |>
+  baretable()
+```
+
+## Session Organization
+
+```{r conf-service, results='asis'}
+sessions <- tribble(
+  ~Year, ~Meeting,
+  2026, "Chair, Fire and Fish: 25 years of progress and challenges, American Fisheries Society National",
+  2026, "Chair, Perspectives on the Cutthroat Trout species complex in the genomics era, Western Division American Fisheries Society",
+  2024, "Co-chair, Science to Restore and Manage Wildland Aquatic Habitats and Watersheds, American Geophysical Union"
+  )
+
+sessions %>% 
+  baretable(
+    align = "llp{13cm}",
+    size = "\\fontsize{10}{12}",
+    add.to.row = list(
+      pos = as.list(seq(NROW(.))),
+      command = rep("\\\\[-0.32cm]", NROW(.))
+    )
+  )
+```
+
+## Reviewer
+
+### Grant Review:
+
+*Great Lakes Fisheries Commission*
+
+### Scientific Journal Review:
+
+*North American Journal of Fisheries Management, Conservation Science
+and Practice, Molecular Ecology Resources, Journal of Applied
+Ichthyology, Conservation Physiology, Heredity, Evolutionary
+Applications, PLoS ONE, Canadian Journal of Aquatic and Fisheries
+Science, Transactions of the American Fisheries Society*
+
+# Outreach and Broader Impacts
+
+## Media and Public Talks
+
+```{r media, results='asis'}
+media <- readr::read_csv("media.csv")
+
+media |>
+  mutate(
+    Time = paste0(Year),
+    ) |>
+  select(Time, Outlet, Role) %>%  
+  baretable(
+    # align = "llp{14cm}r",
+    size = "\\fontsize{10}{12}",
+    add.to.row = list(
+      pos = as.list(seq(NROW(.))),
+      command = rep("\\\\[-0.32cm]", NROW(.))
+    )
+  )
+```
+
+## Public Service and Outreach
+
+```{r outreach, results='asis'}
+tribble(
+  ~ Start, ~ End, ~ Role, ~ Institution,
+  2025, 2025, "Mentor", "EEB Mentor Match",
+  2024, 2024, "Professional Development Seminar", "Purdue University",
+  2023, 2023, "Professional Development Seminar", "Fort Lewis College"
+  ) |>
+  # arrange(-Start) |>
+  mutate(
+    Start = as.character(Start),
+    End = as.character(End),
+    End = tidyr::replace_na(End, ""),
+    Years = if_else(End == Start,
+      as.character(Start),
+      paste(Start, "--", End, sep = ""),
+      paste(Start, "--", End, sep = "")
+    )
+  ) |>
+  select(Years, Role, Institution) |>
+  baretable()
+```
+
+# Conference Presentations
+
+Underlined names indicate undergraduate research mentees.
+
+## Presentations
+
+```{r pres-offered}
+bibliography_entries("bibs/conf_presentations.bib") |> 
+  filter(genre == "Paper") |> 
+  arrange(issued)
+
+#test <- bibliography_entries("bibs/conf_presentations.bib")
+```
+
+## Posters
+
+```{r poster-offered}
+bibliography_entries("bibs/conf_presentations.bib") |> 
+  filter(genre == "Poster") |> 
+  arrange(issued)
+
+
+```
+
+```{=html}
+<!--
+
+\newpage
+
+# References
+
+**Dr. Chris Cheek, Assistant Professor**
+
+Department of Natural Resource Management, South Dakota State University
+
+Address: McFadden Biostress Laboratory 139B, Natural Resource
+Management-Box 2140B University Station Brookings, SD 57007
+
+Phone: 405-850-7362
+
+Email:
+[Christopher.Cheek\@sdstate.edu](mailto:Christopher.Cheek@sdstate.edu){.email}
+
+\
+
+**Dr. Frank McCormick, Program Manager and Special Science Adviser**
+
+Rocky Mountain Research Station, US Forest Service
+
+Address: 240 W Prospect Road Fort Collins, CO, USA 80526
+
+Phone: 208-866-9618
+
+Email:
+[frank.h.mccormick\@usda.gov](mailto:frank.h.mccormick@usda.gov){.email}
+
+\
+
+**Dr. W. Chris Funk, Professor**
+
+Department of Biology, Colorado State University
+
+Address: Biology Building, Room 111, 1878 Campus Delivery, Fort Collins,
+CO, USA 80523-1878
+
+Phone: 970-491-3289
+
+Email:
+[Chris.Funk\@colostate.edu](mailto:Chris.Funk@colostate.edu){.email}
+
+-->
+```

@@ -1,0 +1,13 @@
+"0",""
+"0","### not using"
+"0","n_pubs <- RefManageR::ReadBib(""bibs/journal_articles.bib"", check = FALSE) |> "
+"0","  as_tibble() |> "
+"0","  filter(bibtype == ""Article"") |> "
+"0","  nrow()"
+"0",""
+"0","n_talks <- RefManageR::ReadBib(""bibs/conf_presentations.bib"", check = FALSE) |> "
+"0","  as_tibble() |> "
+"0","  nrow()"
+"2","Error in data.frame(entry = trimws(entry), entry_lower = trimws(tolower(entry)),  : 
+  arguments imply differing number of rows: 0, 1
+"

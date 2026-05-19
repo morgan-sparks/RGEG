@@ -1,0 +1,10 @@
+@techreport{moore2026hatchr,
+  author      = {Moore, A. and Sparks, M.M. and Maitland, B.M.},
+  title       = {Hatch Me if You Can: New {hatchR} Tool Helps Predict and Protect Fish Development},
+  institution = {U.S. Department of Agriculture, Forest Service, Rocky Mountain Research Station},
+  year        = {2026},
+  month       = {May},
+  type        = {Science You Can Use Tool},
+  address     = {Washington, DC},
+  url         = {https://research.fs.usda.gov/treesearch/80446}
+}

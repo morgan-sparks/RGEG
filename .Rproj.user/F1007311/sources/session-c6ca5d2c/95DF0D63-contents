@@ -1,0 +1,15 @@
+@article{Keppeler_preprint,
+	title = {Variation in run-timing is strongly influenced by a large-effect locus in highly divergent lineages of pink salmon},
+	author = {Hemstrom, W and Gruenthal, K. and Shedd, K. and Euclide, P. and Sparks, M.M. and Habicht, C. and Wilson, L. and Christie, M.},
+	journal = {Proceedings of the National Academy of Sciences},
+	pubstate = {{I}n review},
+	abstract = {Sparks generated initial data analysis pipeline and wrote and edited parts of manuscritp.},
+}
+
+@article{Sparks_inreview,
+	title = {A generalizable tool for predicting developmental phenology for wild poikilotherms},
+	author = {Sparks, Morgan M. and Leavell, Brian C. and Maitland, Bryan M.},
+	journal = {Ecology and Evolution},
+	pubstate = {{I}n review},
+	abstract = {Sparks collected some of the data, created case studies, and wrote manuscript with help from coauthors.},
+}

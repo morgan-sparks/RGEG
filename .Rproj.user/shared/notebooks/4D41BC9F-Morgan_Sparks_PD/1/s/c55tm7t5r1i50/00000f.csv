@@ -1,0 +1,25 @@
+"0","tribble("
+"0","  ~Start, ~End, ~Position,"
+"0","  2010, NA, ""American Fisheries Society"","
+"0","  2018, 2019, ""Society for the Study of Evolution"","
+"0","  2016, 2018, ""American Society of Naturalists"""
+"0","  ) |>"
+"0","  arrange(Start) |>"
+"0","  mutate("
+"0","    Start = as.character(Start),"
+"0","    End = as.character(End),"
+"0","    End = tidyr::replace_na(End, ""Present""),"
+"0","    Years = if_else(End == Start,"
+"0","      as.character(Start),"
+"0","      paste(Start, ""--"", End, sep = """"),"
+"0","      paste(Start, ""--"", End, sep = """")"
+"0","    )"
+"0","  ) |>"
+"0","  select(Years, Position) |>"
+"0","  baretable()"
+"1","\begin{tabular}{ll}
+  2010--Present & American Fisheries Society \\ 
+  2016--2018 & American Society of Naturalists \\ 
+  2018--2019 & Society for the Study of Evolution \\ 
+  \end{tabular}
+"
