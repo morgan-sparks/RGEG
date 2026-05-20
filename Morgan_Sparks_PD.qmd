@@ -78,7 +78,7 @@ Morgan.Sparks\@usda.gov \| (208) 514-6345
 
 ## A. Research Team
 
-The scientist is a Research Fish Biologist with the U.S. Forest Service, Rocky Mountain Research Station (RMRS), Water and Watersheds (W&W) Research Program (RWU-4354) at the Boise Aquatic Sciences Lab in Boise, ID. The W&W program is organized around research supporting the investigation of physical and biological processes of aquatic environments and the larger ecosystems and physical environments within which they operate and interact. The program supports a variety of researchers including research fish biologists, research geomorphologists, research ecologists, and research hydrologists. Similarly, when the scientists started their position in January 2024, the lab was supported by diverse support staff , including biologists and hydrologists among other roles, though nearly all of those staff have departed in conjunction with the larger staff turnover within the agency.
+The scientist is a Research Fish Biologist with the U.S. Forest Service, Rocky Mountain Research Station (RMRS), Water and Watersheds (W&W) Research Program (RWU-4354) at the Boise Aquatic Sciences Lab in Boise, ID. The W&W program is organized around research supporting the investigation of physical and biological processes of aquatic environments and the larger ecosystems and physical environments within which they operate and interact. The program supports a variety of researchers including research fish biologists, research geomorphologists, research ecologists, and research hydrologists. Similarly, when the scientists started their position in January 2024, the lab was supported by diverse support staff, including biologists and hydrologists among other roles, though nearly all of those staff have departed in conjunction with the larger staff turnover within the agency.
 
 The W&W mission is *to conduct basic and applied research on the effects of natural processes and human activities on watershed resources, including interactions between aquatic and terrestrial ecosystems*. Program scientists focus on three Research Problem Areas as described in the charter:
 
@@ -112,11 +112,11 @@ The scientists co-leads a team (along with Bryan Maitland, GS-13 Research Fish B
 
 This work has also grown into specific research application, in which the scientist and co-leads have developed a modeling framework (CITATION) allowing them to accurately predict the temporal development of redds for Chinook Salmon in the Middle Fork Salmon River. The group will then leverage those data to model developmental phenology across 30 years of data and more than 25,000 Chinook salmon redds in the watershed over that time.
 
-The scientist is also in the initial stages of tool development with other co-leads and new collaborator (GS-14 Ecologist) to develop a new geo-spatial interactive tool to integrate Pacific Northwest-wide temperature data so Forest Biologists or collaborators can interactively predict developmental phenology in specific stream reaches throughout Washington, Oregon, Idaho, and Montana. This work has involved collaboration with the R&D and Forest Service Office of the Chief Information Officer to find solutions with technological infrastructure to host cutting-edge tools on behalf of the Forest Service and its partners.
+The scientist is also in the initial stages of tool development with other co-leads and new collaborator(GS-14 Ecologist at RMRS) to develop a new geo-spatial interactive tool to integrate Pacific Northwest-wide temperature data so Forest Biologists or collaborators can interactively predict developmental phenology in specific stream reaches throughout Washington, Oregon, Idaho, and Montana. This work has involved collaboration with the R&D and Forest Service Office of the Chief Information Officer to find solutions with technological infrastructure to host cutting-edge tools on behalf of the Forest Service and its partners.
 
 #### *3. Bull Trout Genetic Tools and Parentage Team (Research Themes 2,3)*
 
-The ccientist leads and co-leads (along with Bryan Maitland, GS-13 Research Fish Biologist), various projects focusing on interdisciplinary tools to understand population productive of bull trout, an ESA threatened species widely distributed on National Forest lands. Central to this project is the development of long-term research program where the scientist leads a multi-generational capture-mark-recapture study to understand how various biological and physical stressors relate to productivity of a local bull trout population (CITATION). The scientist collaborates with co-lead Maitland, who is responsible for leading the design and collection of samples to assess food web and ecological connections in the system. The work consists of a highly collaborative effort, which has brought in numerous partners and volunteers from Boise National Forest, Idaho Department of Fish and Game, Idaho Power, Trout Unlimited, Colorado State University, Bureau of Reclamation, and the local community.
+The scientist leads and co-leads (along with Bryan Maitland, GS-13 Research Fish Biologist), various projects focusing on interdisciplinary tools to understand population productivity of bull trout, an ESA threatened species widely distributed on National Forest lands. Central to this project is the development of long-term research program where the scientist leads a multi-generational capture-mark-recapture study to understand how various biological and physical stressors relate to productivity of a local bull trout population (CITATION). The scientist collaborates with co-lead Maitland, who is responsible for leading the design and collection of samples to assess food web and ecological connections in the system. The work consists of a highly collaborative effort, which has brought in numerous partners and volunteers from Boise National Forest, Idaho Department of Fish and Game, Idaho Power, Trout Unlimited, Colorado State University, Bureau of Reclamation, and the local community.
 
 The long-term research program has spurred additional efforts across the region to develop research in similar systems and tools to support this research, specifically, a genetic tool to implement genetic capture-mark-recapture work, which does not yet exist for the species. This work is driven by collaboration with multiple scientists at Idaho Fish and Game's Eagle Fish Genetics Lab and with faculty at University of Idaho. The scientist also collaborates closely with Idaho Fish and Game's native fish coordinator and US Fish and Wildlife Service's Bull Trout Recovery Projects Lead to implement results, techniques, and questions across similar projects for bull trout.
 
@@ -126,7 +126,7 @@ The scientist co-leads the Middle Fork Salmon River Chinook Salmon Research Grou
 
 ## C. Research Related Assignments
 
-1.  The scientist serves as and *ad hoc* member of the Greenback Recovery Team which oversees inter-agency priorities for greenback cutthroat trout recovery as specific by the endangered species act (Consultation 4.B.6.1). The scientist has been especially instrumental in providing context and evidence to muster support for experimental genetic rescue actions being undertaken by partners in 2026.
+1.  The scientist serves as and *ad hoc* member of the Greenback Recovery Team which oversees inter-agency priorities for greenback cutthroat trout recovery as specified by the endangered species act (Consultation 4.B.6.1). The scientist has been especially instrumental in providing context and evidence to muster support for experimental genetic rescue actions being undertaken by partners in 2026.
 
 ## D. Supervisory Responsibilities and Administrative Assignments
 
@@ -142,7 +142,7 @@ Prior to their position with the Forest Service, the scientist was responsible f
 
 ------------------------------------------------------------------------
 
-The scientist independently leads all research activities in this role and is responsible for the full cycle of research from funding to dissemination, including distribution via peer-reviewed publication. The scientist's supervisor in the Program Manager (Frank McCormick) for their research work unit (RWU-4354), who occasionally provides guidance to the scientist concerning agency priorities, funding opportunities, and administrative procedures.
+The scientist independently leads all research activities in this role and is responsible for the full cycle of research from funding to dissemination, including distribution via peer-reviewed publication. The scientist's supervisor in the Program Manager (Frank McCormick, now Charlie Luce on temporary assignement) for their research work unit (RWU-4354), who occasionally provides guidance to the scientist concerning agency priorities, funding opportunities, and administrative procedures.
 
 Presently, the scientists has no direct supervisory roles, in part because existing support staff were already allocated to senior scientists. Similarly, most of the the support staff in the program departed in the period since the scientist joined, none of which have been back-filled due to an extended hiring freeze in the agency. Despite no direct supervisory responsibility, the scientist routinely delegates research tasks and responsibilities to support staff (GS-12 GIS Analyst and Fish Biologist). Moreover, the scientist leads field work (CITATION) where they are responsible for overseeing teams as large as 15 members spanning senior research scientists to agency and non-agency partners to community volunteers.
 
@@ -160,11 +160,11 @@ The modern questions concerning how best to manage and conserve fishes is a grow
 
 ## B. Originality Required
 
-Because modern fisheries and watersheds sciences often sit at the nexus of conventional and well-established methods, but are increasingly pushed by disciplines and techniques developed outside of fisheries, contemporary research in these sciences requires integrative, collaborative, and forward looking scientists and teams. To this end, original science in the discipline often consists of taking methods that are too costly, inefficient, or methodologically intensive and adapting them to research questions or for research products that are useful to partners. Alternatively, new technologies (e.g. open source-software) may allow for the integration of techniques that are already well established but not integrated into the discipline because they were intractable until modern tools allowed them to become widely available. Finally, as these tools and techniques are integrated into the discipline, they open research avenues that were once unthinkable within the field.
+Because modern fisheries and watersheds sciences often sit at the nexus of conventional methods and developing technique from other disciplines, contemporary research in these sciences requires integrative, collaborative, and forward looking scientists and teams. To this end, original science in the discipline often consists of taking methods that are too costly, inefficient, or methodologically intensive and adapting them to research questions or for research products that are useful to partners. Alternatively, new technologies (e.g. open source-software) may allow for the integration of techniques that are already well established but not integrated into the discipline because they were intractable until modern tools allowed them to become widely available. Finally, as these tools and techniques are integrated into the discipline, they open research avenues that were once unthinkable within the field., such as large-effect loci and deleterious inbred regions.
 
 ## C. Demonstrated Originality
 
-Dr. Sparks has completed many research projects that integrate modern techniques around fisheries questions. In the tools as the basis for the Developmental Phenology Modeling Team (Factor 1.B) , he leverage old techniques and used new mathematical conventions to take laboratory approaches to wild settings (CITATION). This represented a first of its kind toolset to allow accurate and precise estimates of developmental phenology for wild fishes. He then developed these tools into a widely distributed tool set available both as a highly flexible programmatic tool (CITATION), but also as a widely useable point-and-click resource available to non-technical partners. This work has then become even more generalizeable as it has been extended to all poikilotherms (CITATION). Similarly, genomic technologies are revolutionizing fisheries science by allowing the identification of fitness related genomic regions and their phenotypic consequences. These themes are the center of Dr. Sparks work with Greenback Cutthroat Trout and Bull Trout (Factor 1.B), as well as other partnerships and consultations (CITATION). In CITATION, Dr. Sparks highlighted how an introduced fish rapidly adapted to a novel environment despite massive reductions in genetic diversity—serving as a model for many introduced and invasive fishes. Dr. Sparks current research now focuses specifically on taking genomic techniques—data that is largely intractable USFS and non-agency partners–and building tools or integrating results into frameworks that drive meaningful interpretations for management and conservation of populations (CITATION). Finally, Dr. Sparks research program focuses especially on integrating cross-disciplinary techniques to answer who ecology questions. For instance, his work leading the Bull Trout Genetic Tools and Development Team (Factor 1.B), integrates genetic techniques with remote sensing, ecological tools (isotopes), and movement ecology to provide a full ecosystem perspective on factors driving productivity of this ESA listed fish.
+Dr. Sparks has completed many research projects that integrate modern techniques around fisheries questions. For the tools at the basis for the Developmental Phenology Modeling Team (Factor 1.B), he leverage old techniques and used new mathematical conventions to take laboratory approaches to wild settings (CITATION). This represented a first of its kind toolset to allow accurate and precise estimates of developmental phenology for wild fishes. He then developed these tools into a widely distributed tool set available both as a highly flexible programmatic tool (CITATION), but also as a user-friendly point-and-click resource available to non-technical partners. This work has then become even more generalizeable as it has been recently extended to all poikilotherms (CITATION). Similarly, genomic technologies are revolutionizing fisheries science by allowing the identification of fitness related genomic regions and their phenotypic consequences. These themes are the center of Dr. Sparks work with Greenback Cutthroat Trout and Bull Trout (Factor 1.B), as well as other partnerships and consultations (CITATION). In CITATION, Dr. Sparks highlighted how an introduced fish rapidly adapted to a novel environment despite massive reductions in genetic diversity—serving as a model for many introduced and invasive fishes. Dr. Sparks current research now focuses specifically on taking genomic techniques—data that is largely intractable for USFS and non-agency partners–and building tools or integrating results into frameworks that drive meaningful interpretations for management and conservation of populations (CITATION). Finally, Dr. Sparks research program focuses especially on integrating cross-disciplinary techniques to answer whole-system ecological questions. For instance, his work leading the Bull Trout Genetic Tools and Development Team (Factor 1.B), integrates genetic techniques with remote sensing, ecological tools (isotopes), and movement ecology to provide a full ecosystem perspective on factors driving productivity of this ESA listed fish.
 
 \newpage
 
@@ -193,9 +193,13 @@ tribble(
   baretable()
 ```
 
-**b. Additional Academic Study:** None
+**b. Additional Academic Study:**
 
-**c. Leadership Development Courses:** None
+None
+
+**c. Leadership Development Courses:**
+
+None
 
 #### 3. Date Last Promotion (Date Hired)
 
@@ -211,7 +215,7 @@ tribble(
   2017, 2023, "\\textbf{Research Assistant}, Department of Biology, Purdue University",
   2014, 2016, "\\textbf{Research Assistant}, USGS Alaska Cooperative Fish and Wildlife Research Unit, University of Alaska Fairbanks"
 ) |>
-  arrange(-Start) |>
+  arrange(Start) |>
   mutate(
     Start = as.character(Start),
     End   = as.character(End),
@@ -512,11 +516,11 @@ In his current position, the scientist wanted to create a framework to formalize
 
 A subsequent article is now in review that extends this modeling framework to other poikilothermic (cold-blooded) organisms, which shows it's utility for key species such as tailed-frogs (CITATION). This work has been built on partnerships with research scientists at universities, other federal research groups, and state research organizations. It also promises to continue to build new tools and avenues of research, including a new Forest Service-specific shiny app in early development, as well as research into developmental phenology using a long-standing Middle Fork Salmon River spawning data set compiled by the Boise Aquatics Lab (RMRS).
 
-#### 2. Rapid evolution in introduced species (*knowledge discovery*) 2017-Present
+#### 2. Genomic tools to understand fish and fisheries (*knowledge discovery*) 2017-Present
 
 This work was the primary focus of the scientist's PhD, in which he used genomic tools to understand rapid evolution by pink salmon to the Great Lakes in the mid-20th century. In this work, the scientist discovered a circadian gene under strong-selection in the invaded population, despite very large reductions in genetic diversity resulting from the founder effect during their introduction. This work one of the first to treat invasive and introduced species as model systems with which to investigate evolutionary and demonstrated how populations can rapidly adapt to novel ecosystems despite massive reductions in genetic diversity (the currency of adaptation). Furthermore, their dissertation presented evidence for a large chromosomal inversion—potentially harboring other adaptive genes—which was one of the first studies to highlight the role of chromosomal polymorphisms in adaptation to novel environments by salmonids. This work has been published in a leading journal (CITATION) and shared widely at top conferences for their respective disciplines (CITATION). While only recently published, this article has been the author's most cited article on per year basis and is likely to be one of the more consequential contributions to the field.
 
-Furthermore, because of the authors expertise in salmonid genomics (especially pink salmon), they partnered on additional research concerning genes which may contribute to run timing variation in pink salmon in their native range (CITATION) with partnerships in the same lab as his Ph.D. and with Alaska Department of Fish and Ga,e. The outcome of this work will likely serve as a primary example of a large-effect locus as a primary driver for phenotypic variation in fishes.
+Furthermore, because of the authors expertise in salmonid genomics (especially pink salmon), they partnered on additional research concerning genes which may contribute to run timing variation in pink salmon in their native range (CITATION) with partnerships in the same lab as his PhD and with Alaska Department of Fish and Game. The outcome of this work will likely serve as a primary example of a large-effect locus as a primary driver for phenotypic variation in fishes. Additionally, because of his expertise in these tools and fisheries, he has been a co-author on multiple studies concerning using genomic tools to better understand fishing and management impacts on Great Lakes fishes (CITATIONS).
 
 #### 3. Characterizing inbreeding in and conservation actions for greenback cutthroat trout (*knowledge discovery*) 2022-Present
 
@@ -775,7 +779,7 @@ grants |>
 
 #### 1. Frank McCormick (Supervisor)
 
-Actiung Staion Director, Pacific Northwest Research Station, Senior Science Adviser, Rocky Mountain Research Station and Program Manager, Water and Watersheds, USFS
+Acting Station Director, Pacific Northwest Research Station, Senior Science Adviser, Rocky Mountain Research Station and Program Manager, Water and Watersheds, USFS
 
 frank.h.mccormick\@usda.gov \| (2080 866-9618
 
@@ -805,13 +809,13 @@ Accomplishment: All
 
 #### 4. Chris Funk
 
-Professor, Department of Bioogy, Colorado State University
+Professor, Department of Biology, Colorado State University
 
 chris.funk\@colostate.edu \| (970) 568-6657
 
 Fort Collins, CO
 
-Accomplishment: 4.C.3
+Accomplishment: 4.C.3, consultation 4.B.6.1
 
 #### 5. Mark Christie
 
@@ -831,7 +835,7 @@ james.efta\@usda.gov \| (406) 329-3447
 
 Missoula, MT
 
-Accomplishment: 4.C.1
+Accomplishment: 4.C.1, consultation 4.B.6.2
 
 #### 7. Matt Fairchild
 
@@ -841,7 +845,7 @@ matthew.fairchild\@usda.gov
 
 Fort Collins, CO
 
-Accomplishment: 4.C.3
+Accomplishment: 4.C.3, consultation 4.B.6.1
 
 #### 8. Josh Kraft
 
@@ -871,7 +875,7 @@ john.hargrove\@idfg.idaho.gov \| (208) 939-6713, ext. 2, ext. 2
 
 Eagle, ID
 
-Accomplishment: 4.C.4
+Accomplishment: 4.C.4, consultation 4.B.6.4
 
 #### 11. Kevin Rogers
 
@@ -881,7 +885,7 @@ kevin.rogers\@state.co.us \| (970) 846-7145
 
 Steamboat Springs, CO
 
-Accomplishment: 4.C.3
+Accomplishment: 4.C.3, consultation 4.B.6.1
 
 ## H. Accuracy and Privacy Act Information
 
