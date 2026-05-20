@@ -246,7 +246,8 @@ tribble(
   "1.", 2025, "Early Career Scientist Award, U.S. Forest Service, Rocky Mountain Research Station",
   "2.", 2025, "Outstanding Service Award, U.S. Forest Service, Rocky Mountain Research Station",
   "3.", 2024, "Outstanding Service Award, U.S. Forest Service, Rocky Mountain Research Station",
-  ) %>%
+  ) |> 
+  arrange(Year) %>%
  baretable(
   align = "lrp{1.3cm}p{\\dimexpr\\linewidth-4.5cm\\relax}",
   size = "\\fontsize{10}{12}",
@@ -267,7 +268,8 @@ tribble(
   "3.", 2021, "Waser Fellowship, Purdue University Department of Biological Sciences", 
   "4.", 2020, "Purdue Research Foundation Graduate Fellowship", 
   "5.", 2017, "Andrews Fellowship, Purdue University Department of Biological Sciences",
-  ) %>%
+  ) |>  
+  arrange(Year) %>%
  baretable(
     align = "lrp{1.3cm}p{11.0cm}",
     size = "\\fontsize{10}{12}",
@@ -290,7 +292,8 @@ tribble(
   "5.", 2012, "Wally McClure Scholarship, Montana Chapter American Fisheries Society",
   "6.", 2010, "Montana Druids Honors Society, Wildlife Biology, University of Montana",
   "7.", 2009, "Western Undergraduate Exchange Scholarship, University of Montana"
-  ) %>%
+  ) |>  
+  arrange(Year) %>%
  baretable(
     align = "lrp{1.3cm}p{11.0cm}",
     size = "\\fontsize{10}{12}",
@@ -347,7 +350,7 @@ tribble(
   "4.", 2010, 2013, "President, University of Montana Student Chapter of the American Fisheries Society",
   "5.", 2012, 2013, "Secretary, Westslope Chapter of Trout Unlimited"
   ) |>
-  arrange(-Start) |>
+  arrange(Start) |>
   mutate(
     Start = as.character(Start),
     End = as.character(End),
